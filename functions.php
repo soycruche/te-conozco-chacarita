@@ -6,15 +6,38 @@
 defined( 'ABSPATH' ) || exit;
 
 function chacarita_enqueue_styles() {
+	wp_enqueue_style(
+		'chacarita-google-fonts',
+		'https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@400;500;600;700&display=swap',
+		array(),
+		null
+	);
 	wp_enqueue_style( 'astra-parent-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style(
 		'chacarita-child-style',
 		get_stylesheet_directory_uri() . '/style.css',
-		array( 'astra-parent-style' ),
+		array( 'astra-parent-style', 'chacarita-google-fonts' ),
 		wp_get_theme()->get( 'Version' )
 	);
 }
 add_action( 'wp_enqueue_scripts', 'chacarita_enqueue_styles' );
+
+/**
+ * Habilita el logo custom para poder subirlo desde
+ * Apariencia > Personalizar > Identidad del sitio.
+ */
+function chacarita_theme_setup() {
+	add_theme_support(
+		'custom-logo',
+		array(
+			'height'      => 200,
+			'width'       => 200,
+			'flex-height' => true,
+			'flex-width'  => true,
+		)
+	);
+}
+add_action( 'after_setup_theme', 'chacarita_theme_setup' );
 
 /**
  * CPT "El Barrio": directorio de locales/emprendedores del festival.

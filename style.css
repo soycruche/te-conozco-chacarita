@@ -8,6 +8,56 @@
  Text Domain:  chacarita-child
 */
 
+:root {
+	--tcc-coral: #f04e37;
+	--tcc-black: #1a1a1a;
+	--tcc-lime: #d4d92c;
+	--tcc-indigo: #4b4098;
+	--tcc-white: #ffffff;
+
+	--tcc-font-display: 'Archivo Black', sans-serif;
+	--tcc-font-body: 'Poppins', sans-serif;
+}
+
+body {
+	font-family: var(--tcc-font-body);
+	color: var(--tcc-black);
+}
+
+h1, h2, h3,
+.barrio-archive h1 {
+	font-family: var(--tcc-font-display);
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+}
+
+a {
+	color: var(--tcc-coral);
+}
+
+a:hover {
+	color: var(--tcc-indigo);
+}
+
+.ast-button,
+button,
+input[type="submit"] {
+	background-color: var(--tcc-coral) !important;
+	border-color: var(--tcc-coral) !important;
+	font-family: var(--tcc-font-body);
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+.ast-button:hover,
+button:hover,
+input[type="submit"]:hover {
+	background-color: var(--tcc-indigo) !important;
+	border-color: var(--tcc-indigo) !important;
+}
+
+/* Catálogo "El Barrio" */
+
 .barrio-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -16,10 +66,16 @@
 }
 
 .barrio-card {
-	border: 1px solid #e0e0e0;
-	border-radius: 8px;
+	border: 2px solid var(--tcc-black);
+	border-radius: 12px;
 	overflow: hidden;
-	background: #fff;
+	background: var(--tcc-white);
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.barrio-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 6px 6px 0 var(--tcc-indigo);
 }
 
 .barrio-card img {
@@ -34,21 +90,28 @@
 
 .barrio-card__categoria {
 	display: inline-block;
-	font-size: 0.75rem;
+	font-family: var(--tcc-font-body);
+	font-size: 0.7rem;
+	font-weight: 600;
 	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	opacity: 0.7;
-	margin-bottom: 8px;
+	letter-spacing: 0.08em;
+	color: var(--tcc-white);
+	background: var(--tcc-coral);
+	padding: 3px 10px;
+	border-radius: 999px;
+	margin-bottom: 10px;
 }
 
 .barrio-single__meta {
 	margin: 24px 0;
 	padding: 16px;
 	background: #f7f7f7;
+	border-left: 4px solid var(--tcc-lime);
 	border-radius: 8px;
 }
 
 .barrio-single__meta a {
 	display: inline-block;
 	margin-right: 16px;
+	font-weight: 600;
 }
