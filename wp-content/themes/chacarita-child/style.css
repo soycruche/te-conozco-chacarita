@@ -1,0 +1,54 @@
+/*
+ Theme Name:   Chacarita Child
+ Theme URI:    https://teconozcochacarita.com
+ Description:  Child theme de Astra para el Festival Te Conozco Chacarita.
+ Author:       Togetherwith
+ Template:     astra
+ Version:      1.0.0
+ Text Domain:  chacarita-child
+*/
+
+.barrio-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: 24px;
+	margin: 32px 0;
+}
+
+.barrio-card {
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
+	overflow: hidden;
+	background: #fff;
+}
+
+.barrio-card img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.barrio-card__body {
+	padding: 16px;
+}
+
+.barrio-card__categoria {
+	display: inline-block;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	opacity: 0.7;
+	margin-bottom: 8px;
+}
+
+.barrio-single__meta {
+	margin: 24px 0;
+	padding: 16px;
+	background: #f7f7f7;
+	border-radius: 8px;
+}
+
+.barrio-single__meta a {
+	display: inline-block;
+	margin-right: 16px;
+}

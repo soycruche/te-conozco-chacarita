@@ -1,0 +1,15 @@
+.DS_Store
+node_modules/
+*.log
+
+# WordPress core y contenido que NO versionamos (vive solo en Donweb)
+/wp-admin/
+/wp-includes/
+/*.php
+/wp-content/uploads/
+/wp-content/plugins/
+/wp-content/cache/
+wp-config.php
+
+# Excepción: sí versionamos nuestro child theme
+!/wp-content/themes/chacarita-child/
