@@ -1,8 +1,10 @@
 # Te Conozco Chacarita — Festival (2ª edición)
 
-Sitio del festival en WordPress. Este repo versiona el **child theme** custom
-(`wp-content/themes/chacarita-child`); el core de WordPress, plugins y la base
-de datos viven solo en Donweb.
+Sitio del festival en WordPress. Este repo **es** el child theme "Chacarita
+Child" (los archivos del tema están en la raíz del repo, no en una subcarpeta,
+porque cPanel Git Version Control clona el repo completo dentro de
+`wp-content/themes/chacarita-child/` en el servidor). El core de WordPress,
+plugins y la base de datos viven solo en Donweb.
 
 ## Stack
 
